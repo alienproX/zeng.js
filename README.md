@@ -18,17 +18,17 @@ npm install zeng.js
 
 **How To Use**
 
-emit event in original pages
+emit event in the one page
 ```
 import zeng from 'zeng.js'
 
-zeng.emit('EVEN_NAME', arg1, arg2, ...)
+zeng.emit('EVENT_NAME', arg1, arg2, ...)
 ```
 
 
 receive event in other pages
 ```
-zeng.on('EVEN_NAME', (arg1, arg2, ...) => {
+zeng.on('EVENT_NAME', (arg1, arg2, ...) => {
   // do something
 })
 ```
