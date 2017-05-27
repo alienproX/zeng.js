@@ -26,6 +26,9 @@ var zeng = {
       arr.push(str)
     })
     window.localStorage.setItem('_zeng_' + name, JSON.stringify(arr))
+    window.setTimeout(function () {
+      window.localStorage.removeItem('_zeng_' + name)
+    }, 30)
   },
   on: function (name, fn) {
     window.addEventListener('storage', function (s) {
@@ -55,7 +58,6 @@ var zeng = {
           arr.push(val)
         })
         fn && fn.apply(null, arr)
-        window.localStorage.removeItem(s.key)
       }
     }, false)
   }
