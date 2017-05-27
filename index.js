@@ -62,4 +62,4 @@ var zeng = {
     }, false)
   }
 }
-export default zeng
+exports = module.exports = zeng
