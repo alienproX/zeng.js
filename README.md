@@ -8,7 +8,7 @@ as zeng's quote:
 
 > I'm just the messenger.
 
-zeng.js simply make a communication between different tabs or windows. is a mini javascript library without any else frameworks. only 70 lines.
+zeng.js simply make a communication between different tabs or windows. is a mini javascript library without any else frameworks. only 70+ lines.
 
 **Install**
 
