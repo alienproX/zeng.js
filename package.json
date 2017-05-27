@@ -1,7 +1,7 @@
 {
   "name": "zeng.js",
-  "version": "1.0.0",
-  "description": "make a communication between different browser tabs or windows. Edit",
+  "version": "1.0.2",
+  "description": "make a communication between different browser tabs or windows.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

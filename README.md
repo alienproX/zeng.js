@@ -2,13 +2,11 @@
 
 <img src= "https://mblur.com/files/zeng.jpg" width="400" />
 
-Mr zeng is a supporting protagonists in the Kung Fu Panda. is a palace servant too. what does he do ?
+Mr zeng is a supporting protagonists in the _Kung Fu Panda_. is a palace servant too. what does he do ?
 
-as zeng's quote
+as zeng's quote:
 
 > I'm just the messenger.
-
-:)
 
 zeng.js simply make a communication between different browser tabs or windows. is a mini javascript library without any else frameworks. only 63 lines.
 
