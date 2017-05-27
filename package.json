@@ -1,0 +1,26 @@
+{
+  "name": "zeng.js",
+  "version": "1.0.0",
+  "description": "make a communication between different browser tabs or windows. Edit",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cattla/zeng.js.git"
+  },
+  "keywords": [
+    "communication",
+    "tabs",
+    "windows",
+    "localStorage",
+    "storage"
+  ],
+  "author": "Cattla Lee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cattla/zeng.js/issues"
+  },
+  "homepage": "https://github.com/cattla/zeng.js#readme"
+}
