@@ -37,4 +37,4 @@ online demo: https://mblur.com/demos/zeng/
 
 **Browser Support**
 
-IE 8+
+IE8+ and model browsers.
