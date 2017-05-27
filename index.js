@@ -4,7 +4,8 @@ var zeng = {
     var name = params[0]
     var args = params.slice(1)
     var arr = []
-    args.forEach(function (item) {
+    for (var i = 0; i < args.length; i++) {
+      var item = args[i]
       var str = ''
       switch (typeof item) {
         case 'string':
@@ -24,18 +25,18 @@ var zeng = {
           break
       }
       arr.push(str)
-    })
+    }
     window.localStorage.setItem('_zeng_' + name, JSON.stringify(arr))
-    window.setTimeout(function () {
-      window.localStorage.removeItem('_zeng_' + name)
-    }, 30)
+    window.localStorage.removeItem('_zeng_' + name)
   },
   on: function (name, fn) {
-    window.addEventListener('storage', function (s) {
+    var handle = function (s) {
       if (s.key === '_zeng_' + name) {
         var params = JSON.parse(s.newValue)
         var arr = []
-        params.forEach(function (item) {
+        if (!params) return
+        for (var i = 0; i < params.length; i++) {
+          var item = params[i]
           var type = item.slice(0, item.indexOf(':'))
           var val = item.slice(item.indexOf(':') + 1)
           switch (type) {
@@ -56,10 +57,16 @@ var zeng = {
               break
           }
           arr.push(val)
-        })
+        }
         fn && fn.apply(null, arr)
       }
-    }, false)
+    }
+    if (window.addEventListener) {
+      window.addEventListener('storage', handle, false)
+    } else {
+      window.attachEvent('onstorage', handle)
+    }
   }
 }
+
 exports = module.exports = zeng
