@@ -64,7 +64,7 @@ var zeng = {
     if (window.addEventListener) {
       window.addEventListener('storage', handle, false)
     } else {
-      window.attachEvent('onstorage', handle)
+      document.attachEvent('onstorage', handle)
     }
   }
 }
