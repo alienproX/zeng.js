@@ -1,3 +1,5 @@
+var msg = 'IEkgV0lMTCBCRSBCQUNLIC0tIFpFTkcuSlM'
+
 var zeng = {
   emit: function () {
     var params = Array.prototype.slice.call(arguments)
@@ -27,14 +29,17 @@ var zeng = {
       arr.push(str)
     }
     window.localStorage.setItem('_zeng_' + name, JSON.stringify(arr))
-    window.localStorage.removeItem('_zeng_' + name)
+    window.localStorage.setItem('_zeng_' + name, msg)
   },
   on: function (name, fn) {
     var handle = function (s) {
       if (s.key === '_zeng_' + name) {
+        if (s.newValue === msg) {
+          window.localStorage.removeItem('_zeng_' + name)
+          return
+        }
         var params = JSON.parse(s.newValue)
         var arr = []
-        if (!params) return
         for (var i = 0; i < params.length; i++) {
           var item = params[i]
           var type = item.slice(0, item.indexOf(':'))
@@ -64,7 +69,7 @@ var zeng = {
     if (window.addEventListener) {
       window.addEventListener('storage', handle, false)
     } else {
-      document.attachEvent('onstorage', handle)
+      window.attachEvent('onstorage', handle)
     }
   }
 }
