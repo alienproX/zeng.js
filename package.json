@@ -1,6 +1,6 @@
 {
   "name": "zeng.js",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "make a communication between different tabs or windows.",
   "main": "index.js",
   "scripts": {
